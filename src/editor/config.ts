@@ -1,0 +1,1 @@
+export const PLACEHOLDER_TEXT = '// Welcome to SGL!\n\nwhen (+4,0) is SOLID -> jump\n\nwhen (+10.0, 4) to (+45,-49) has 3 SPIKE and 1 EMPTY\n    -> turn and jump 3\n\nwhen (-3,   4) is EMPTY    -> turn   \n';

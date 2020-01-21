@@ -1,0 +1,82 @@
+#toolbar {
+    position: relative;
+    font-family: sans-serif;
+}
+
+.toolbar--buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.toolbar--button {
+    width: 48px;
+    height: 48px;
+    margin: 0px 4px;
+    border-radius: 4px;
+
+    &[disabled] {
+        color: $color-primary-dark;
+        cursor: default;
+    }
+
+    &:not([disabled]):hover {
+        background-color: $color-primary-dark;
+        cursor: pointer;
+    }
+}
+
+.toolbar--button__green {
+    color: $color-accent-green;
+}
+
+.toolbar--button__red {
+    color: $color-accent-red;
+}
+
+.toolbar--dropdown {
+    position: absolute;
+    top: 2px;
+    left: 8px;
+
+    font-size: 16px;
+
+    height: 44px;
+    padding: 0px 16px;
+    border-radius: 4px;
+
+    color: $color-text-light;
+    border-color: $color-text-dark;
+    background-color: $color-primary-dark;
+}
+
+/** LANGUAGE OUTPUT **/
+.toolbar--output {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+
+    width: 100%;
+
+    span {
+        display: block;
+
+        margin: 4px 8px;
+        padding: 10px 14px;
+        border: 1px solid;
+        border-radius: 4px;
+
+        cursor: default;
+    }
+}
+
+.toolbar--output__errors span {
+    background-color: darken($color-accent-red, 34%);
+    border-color: $color-accent-red;
+    color: $color-accent-red;
+}
+
+.toolbar--output__warnings span {
+    background-color: darken($color-accent-yellow, 31%);
+    border-color: $color-accent-yellow;
+    color: $color-accent-yellow;
+}
